@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bffc59eac1.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".click").click(function () {
+                $(".popup_box").css({
+                    "opacity": "1",
+                    "pointer-events": "auto"
+                });
+            });
+            $(".btn1").click(function () {
+                $(".popup_box").css({
+                    "opacity": "0",
+                    "pointer-events": "auto"
+                });
+            });
+            $(".btn2").click(function () {
+                $(".popup_box").css({
+                    "opacity": "0",
+                    "pointer-events": "auto"
+                });
+                alert("Your Account Deleted");
+                $(".click").text("Account deleted");
+            });       
+        });
+    </script>
+</head>
+
+<body>
+
+    <a href="#" class="click center">Click Me</a>
+    <div class="popup_box center">
+        <i class="fa-solid fa-exclamation"></i>
+        <h1>Your account will be deleted permanently !</h1>
+        <label> Are you sure to proceed?</label>
+        <div class="btns">
+            <a href="#" class="btn1">Cancel Process</a>
+            <a href="#" class="btn2">Delete Account</a>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
